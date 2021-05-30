@@ -1,0 +1,22 @@
+.Navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #222;
+  color: white;
+  margin: 0;
+  padding: 0 1rem;
+  width: 100%;
+
+  .Brand {
+  }
+
+  ul {
+    display: flex;
+    list-style: none;
+  }
+
+  li {
+    margin: 0 1rem;
+  }
+}
