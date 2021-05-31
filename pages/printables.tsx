@@ -1,3 +1,9 @@
-export default function Blog() {
-  return <div>printables</div>;
+import { Layout } from "../components";
+
+export default function Printables() {
+  return (
+    <Layout>
+      <div>printables</div>
+    </Layout>
+  );
 }

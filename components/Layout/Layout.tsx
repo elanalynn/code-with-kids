@@ -2,11 +2,9 @@ import Head from "next/head";
 import { Navigation } from "../Navigation";
 import styles from "./Layout.module.scss";
 
-type Page = any;
-
 export function Layout({ children }: any) {
   return (
-    <div className={styles.container}>
+    <div className={styles.Container}>
       <Head>
         <title>Code with Kids</title>
         <meta
@@ -21,11 +19,10 @@ export function Layout({ children }: any) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navigation />
-
-      <main className={styles.main}>{children}</main>
-      <footer className={styles.footer}></footer>
+      <main className={styles.Main}>{children}</main>
+      <footer className={styles.Footer}></footer>
     </div>
   );
 }
 
-export const getLayout = (page: Page) => <Layout>{page}</Layout>;
+export const getLayout = (page: any) => <Layout>{page}</Layout>;

@@ -1,36 +1,30 @@
 import Link from "next/link";
 import styles from "./Navigation.module.scss";
 
+const navItems = ["About", "Adults", "Activities", "Printables", "Blog"];
+
+function NavItem({ href, name }: any) {
+  return (
+    <li>
+      <Link href={href}>{name}</Link>
+    </li>
+  );
+}
+
 export function Navigation() {
   return (
     <nav className={styles.Navigation}>
-      <div className={styles.Brand}>CWK</div>
+      <div className={styles.Brand}>
+        <Link href={"/"}>CWK</Link>
+      </div>
       <ul>
-        <li>
-          <Link href="/">
-            <a>Home</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/about">
-            <a>About</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/adults">
-            <a>Adults</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/printables">
-            <a>Printables</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/blog">
-            <a>Blog</a>
-          </Link>
-        </li>
+        {navItems.map((item) => (
+          <NavItem
+            href={`/${item.toLocaleLowerCase()}`}
+            key={item}
+            name={item}
+          />
+        ))}
       </ul>
     </nav>
   );

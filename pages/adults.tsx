@@ -1,8 +1,10 @@
-export default function Blog() {
+import { Layout } from "../components";
+
+export default function Adults() {
   return (
-    <div>
+    <Layout>
       adults
       <h1>Where to start</h1>
-    </div>
+    </Layout>
   );
 }
